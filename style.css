@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+body {
+  background: rgb(255, 255, 255);
+}
+a {
+  color: honeydew;
+  position: relative;
+}
+.container {
+  width: 500px;
+  height: 440px;
+  display: flex;
+  margin: 90px auto;
+  justify-content: center;
+  position: relative;
+  transform: rotate(-25deg) skew(34deg);
+}
+.container > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 3px 5px 199px -19px rgba(255, 244, 84, 1);
+}
+.container > ul > li {
+  display: flex;
+  margin-top: 14px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  width: 37px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 3px 5px 199px -19px rgba(255, 244, 84, 1);
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 38px;
+  background-color: rgb(23, 22, 22);
+  width: 8px;
+  top: 20px;
+  left: -1px;
+  transform: rotate(90deg) skew(0deg, 45deg);
+}
+/* .container > ul > li:nth-child(2) > a::before {
+  left: 3.4px;
+} */
+a::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(23, 22, 22);
+  width: 8px;
+  height: 46px;
+  left: -19px;
+  bottom: -18px;
+  transform: skewY(-45deg);
+}
+
+.container > ul > li:nth-child(2) > a::after {
+  left: -18.9px;
+}
+div {
+  position: absolute;
+}
+.container > ul > li:hover {
+  transform: perspective(10000px) translate3d(10px, 0, 810px);
+  z-index: 1;
+}
+.container > ul > li:hover > div > a > i {
+  color: rgba(255, 244, 84, 1);
+}
